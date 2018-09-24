@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Employee_DatabaseModelStoreContainer" CdmEntityContainer="Employee_DatabaseEntities">
+    <EntitySetMapping Name="Cities">
+      <EntityTypeMapping TypeName="Employee_DatabaseModel.City">
+        <MappingFragment StoreEntitySet="City">
+          <ScalarProperty Name="City_ID" ColumnName="City_ID" />
+          <ScalarProperty Name="City_Name" ColumnName="City_Name" />
+          <ScalarProperty Name="State_ID" ColumnName="State_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Departments">
+      <EntityTypeMapping TypeName="Employee_DatabaseModel.Department">
+        <MappingFragment StoreEntitySet="Department">
+          <ScalarProperty Name="Department_ID" ColumnName="Department_ID" />
+          <ScalarProperty Name="Department_Name" ColumnName="Department_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="Employee_DatabaseModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="Emp_ID" ColumnName="Emp_ID" />
+          <ScalarProperty Name="Emp_First_Name" ColumnName="Emp_First_Name" />
+          <ScalarProperty Name="Emp_Last_Name" ColumnName="Emp_Last_Name" />
+          <ScalarProperty Name="Emp_Email_ID" ColumnName="Emp_Email_ID" />
+          <ScalarProperty Name="Employee_Mobile_Number" ColumnName="Employee_Mobile_Number" />
+          <ScalarProperty Name="Emp_State_ID" ColumnName="Emp_State_ID" />
+          <ScalarProperty Name="Emp_City_ID" ColumnName="Emp_City_ID" />
+          <ScalarProperty Name="Emp_Skill_ID" ColumnName="Emp_Skill_ID" />
+          <ScalarProperty Name="Emp_DOB" ColumnName="Emp_DOB" />
+          <ScalarProperty Name="Emp_DOJ" ColumnName="Emp_DOJ" />
+          <ScalarProperty Name="Emp_Dept_ID" ColumnName="Emp_Dept_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Skills">
+      <EntityTypeMapping TypeName="Employee_DatabaseModel.Skill">
+        <MappingFragment StoreEntitySet="Skill">
+          <ScalarProperty Name="Skill_ID" ColumnName="Skill_ID" />
+          <ScalarProperty Name="Skill_Name" ColumnName="Skill_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="States">
+      <EntityTypeMapping TypeName="Employee_DatabaseModel.State">
+        <MappingFragment StoreEntitySet="State">
+          <ScalarProperty Name="State_ID" ColumnName="State_ID" />
+          <ScalarProperty Name="State_Name" ColumnName="State_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

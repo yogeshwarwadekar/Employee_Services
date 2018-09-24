@@ -1,0 +1,9 @@
+E:\PRACTISE\Employee_Service\Employee_Data_Layer\bin\Release\Employee_Data_Layer.dll.config
+E:\PRACTISE\Employee_Service\Employee_Data_Layer\bin\Release\Employee_Data_Layer.dll
+E:\PRACTISE\Employee_Service\Employee_Data_Layer\bin\Release\Employee_Data_Layer.pdb
+E:\PRACTISE\Employee_Service\Employee_Data_Layer\bin\Release\EntityFramework.dll
+E:\PRACTISE\Employee_Service\Employee_Data_Layer\bin\Release\EntityFramework.SqlServer.dll
+E:\PRACTISE\Employee_Service\Employee_Data_Layer\bin\Release\EntityFramework.xml
+E:\PRACTISE\Employee_Service\Employee_Data_Layer\bin\Release\EntityFramework.SqlServer.xml
+E:\PRACTISE\Employee_Service\Employee_Data_Layer\obj\Release\Employee_Data_Layer.dll
+E:\PRACTISE\Employee_Service\Employee_Data_Layer\obj\Release\Employee_Data_Layer.pdb

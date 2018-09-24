@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EmployeeDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="City_ID" />
+    </Key>
+    <Property Name="City_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="City_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="State_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="Department_ID" />
+    </Key>
+    <Property Name="Department_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Department_Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="Emp_ID" />
+    </Key>
+    <Property Name="Emp_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Emp_First_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Emp_Last_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Emp_Email_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Emp_Mobile_Number" Type="nvarchar" MaxLength="12" />
+    <Property Name="Emp_State_ID" Type="int" />
+    <Property Name="Emp_City_ID" Type="int" />
+    <Property Name="Emp_Skill_ID" Type="int" />
+    <Property Name="Emp_DOB" Type="date" />
+    <Property Name="Emp_DOJ" Type="date" />
+    <Property Name="Emp_Dept_ID" Type="int" />
+    <Property Name="Emp_Rating" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="Rating">
+    <Key>
+      <PropertyRef Name="Rating_ID" />
+    </Key>
+    <Property Name="Rating_ID" Type="int" Nullable="false" />
+    <Property Name="Rating_Name" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="Skill">
+    <Key>
+      <PropertyRef Name="Skill_ID" />
+    </Key>
+    <Property Name="Skill_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Skill_Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="State">
+    <Key>
+      <PropertyRef Name="State_ID" />
+    </Key>
+    <Property Name="State_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="State_Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Employee_Database.dbo.EmployeeDetail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="EmployeeDetail">
+    <Key>
+      <PropertyRef Name="Emp_ID" />
+      <PropertyRef Name="State_ID" />
+      <PropertyRef Name="City_ID" />
+      <PropertyRef Name="Department_ID" />
+      <PropertyRef Name="Skill_ID" />
+    </Key>
+    <Property Name="Emp_ID" Type="int" Nullable="false" />
+    <Property Name="Emp_First_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Emp_Last_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Emp_Email_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Emp_Mobile_Number" Type="nvarchar" MaxLength="12" />
+    <Property Name="Emp_State_ID" Type="int" />
+    <Property Name="Emp_City_ID" Type="int" />
+    <Property Name="Emp_Skill_ID" Type="int" />
+    <Property Name="Emp_DOB" Type="date" />
+    <Property Name="Emp_DOJ" Type="date" />
+    <Property Name="Emp_Dept_ID" Type="int" />
+    <Property Name="State_ID" Type="int" Nullable="false" />
+    <Property Name="State_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="City_ID" Type="int" Nullable="false" />
+    <Property Name="City_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Department_ID" Type="int" Nullable="false" />
+    <Property Name="Department_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Skill_ID" Type="int" Nullable="false" />
+    <Property Name="Skill_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Emp_Rating" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityContainer Name="EmployeeDBModelStoreContainer">
+    <EntitySet Name="City" EntityType="Self.City" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Department" EntityType="Self.Department" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Rating" EntityType="Self.Rating" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Skill" EntityType="Self.Skill" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="State" EntityType="Self.State" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmployeeDetail" EntityType="Self.EmployeeDetail" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [EmployeeDetail].[Emp_ID] AS [Emp_ID], 
+    [EmployeeDetail].[Emp_First_Name] AS [Emp_First_Name], 
+    [EmployeeDetail].[Emp_Last_Name] AS [Emp_Last_Name], 
+    [EmployeeDetail].[Emp_Email_ID] AS [Emp_Email_ID], 
+    [EmployeeDetail].[Emp_Mobile_Number] AS [Emp_Mobile_Number], 
+    [EmployeeDetail].[Emp_State_ID] AS [Emp_State_ID], 
+    [EmployeeDetail].[Emp_City_ID] AS [Emp_City_ID], 
+    [EmployeeDetail].[Emp_Skill_ID] AS [Emp_Skill_ID], 
+    [EmployeeDetail].[Emp_DOB] AS [Emp_DOB], 
+    [EmployeeDetail].[Emp_DOJ] AS [Emp_DOJ], 
+    [EmployeeDetail].[Emp_Dept_ID] AS [Emp_Dept_ID], 
+    [EmployeeDetail].[State_ID] AS [State_ID], 
+    [EmployeeDetail].[State_Name] AS [State_Name], 
+    [EmployeeDetail].[City_ID] AS [City_ID], 
+    [EmployeeDetail].[City_Name] AS [City_Name], 
+    [EmployeeDetail].[Department_ID] AS [Department_ID], 
+    [EmployeeDetail].[Department_Name] AS [Department_Name], 
+    [EmployeeDetail].[Skill_ID] AS [Skill_ID], 
+    [EmployeeDetail].[Skill_Name] AS [Skill_Name], 
+    [EmployeeDetail].[Emp_Rating] AS [Emp_Rating]
+    FROM [dbo].[EmployeeDetail] AS [EmployeeDetail]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

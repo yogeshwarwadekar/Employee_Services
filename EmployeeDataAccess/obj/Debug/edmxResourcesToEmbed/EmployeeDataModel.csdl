@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EmployeeDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="City_ID" />
+    </Key>
+    <Property Name="City_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="City_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="State_ID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="Department_ID" />
+    </Key>
+    <Property Name="Department_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Department_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="Emp_ID" />
+    </Key>
+    <Property Name="Emp_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Emp_First_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Emp_Last_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Emp_Email_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Emp_State_ID" Type="Int32" />
+    <Property Name="Emp_City_ID" Type="Int32" />
+    <Property Name="Emp_Skill_ID" Type="Int32" />
+    <Property Name="Emp_DOB" Type="DateTime" Precision="0" />
+    <Property Name="Emp_DOJ" Type="DateTime" Precision="0" />
+    <Property Name="Emp_Dept_ID" Type="Int32" />
+    <Property Name="Emp_Mobile_Number" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="Emp_Rating" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Skill">
+    <Key>
+      <PropertyRef Name="Skill_ID" />
+    </Key>
+    <Property Name="Skill_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Skill_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="State">
+    <Key>
+      <PropertyRef Name="State_ID" />
+    </Key>
+    <Property Name="State_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="State_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="Employee_DatabaseEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Cities" EntityType="Self.City" />
+    <EntitySet Name="Departments" EntityType="Self.Department" />
+    <EntitySet Name="Employees" EntityType="Self.Employee" />
+    <EntitySet Name="Skills" EntityType="Self.Skill" />
+    <EntitySet Name="States" EntityType="Self.State" />
+    <FunctionImport Name="sp_getAllEmployee" ReturnType="Collection(EmployeeDBModel.sp_getAllEmployee_Result)" />
+    <EntitySet Name="EmployeeDetails" EntityType="EmployeeDBModel.EmployeeDetail" />
+    <EntitySet Name="Ratings" EntityType="EmployeeDBModel.Rating" />
+  </EntityContainer>
+  <ComplexType Name="sp_getAllEmployee_Result">
+    <Property Type="Int32" Name="Emp_ID" Nullable="false" />
+    <Property Type="String" Name="Emp_First_Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Emp_Last_Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Emp_Email_ID" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Employee_Mobile_Number" Nullable="true" MaxLength="12" />
+    <Property Type="String" Name="State_Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="City_Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Skill_Name" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="Emp_DOB" Nullable="true" />
+    <Property Type="DateTime" Name="Emp_DOJ" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="EmployeeDetail">
+    <Key>
+      <PropertyRef Name="Emp_ID" />
+      <PropertyRef Name="City_ID" />
+      <PropertyRef Name="State_ID" />
+      <PropertyRef Name="Department_ID" />
+      <PropertyRef Name="Skill_ID" />
+    </Key>
+    <Property Name="Emp_ID" Type="Int32" Nullable="false" />
+    <Property Name="Emp_First_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Emp_Last_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Emp_Email_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="State_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="City_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Skill_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Emp_DOB" Type="DateTime" Precision="0" />
+    <Property Name="Emp_DOJ" Type="DateTime" Precision="0" />
+    <Property Name="Emp_Mobile_Number" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="Department_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="City_ID" Type="Int32" Nullable="false" />
+    <Property Name="State_ID" Type="Int32" Nullable="false" />
+    <Property Name="Department_ID" Type="Int32" Nullable="false" />
+    <Property Name="Skill_ID" Type="Int32" Nullable="false" />
+    <Property Name="Emp_State_ID" Type="Int32" />
+    <Property Name="Emp_City_ID" Type="Int32" />
+    <Property Name="Emp_Skill_ID" Type="Int32" />
+    <Property Name="Emp_Dept_ID" Type="Int32" />
+    <Property Name="Emp_Rating" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Rating">
+    <Key>
+      <PropertyRef Name="Rating_ID" />
+    </Key>
+    <Property Name="Rating_ID" Type="Int32" Nullable="false" />
+    <Property Name="Rating_Name" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>
