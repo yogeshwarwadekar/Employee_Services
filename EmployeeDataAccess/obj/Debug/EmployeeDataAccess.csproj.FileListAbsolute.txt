@@ -7,4 +7,6 @@ E:\PRACTISE\Employee_Service\EmployeeDataAccess\bin\Debug\EntityFramework.xml
 E:\PRACTISE\Employee_Service\EmployeeDataAccess\bin\Debug\EntityFramework.SqlServer.xml
 E:\PRACTISE\Employee_Service\EmployeeDataAccess\obj\Debug\EmployeeDataAccess.dll
 E:\PRACTISE\Employee_Service\EmployeeDataAccess\obj\Debug\EmployeeDataAccess.pdb
-E:\PRACTISE\Employee_Service\EmployeeDataAccess\obj\Debug\EmployeeDataAccess.csprojResolveAssemblyReference.cache
+E:\PRACTISE\Employee_Service\EmployeeDataAccess\obj\Debug\EmployeeDataAccess.csproj.CoreCompileInputs.cache
+E:\PRACTISE\Employee_Service\EmployeeDataAccess\obj\Debug\EmployeeDataAccess.csproj.CopyComplete
+E:\PRACTISE\Employee_Service\EmployeeDataAccess\obj\Debug\EmployeeDataAccess.csprojAssemblyReference.cache
