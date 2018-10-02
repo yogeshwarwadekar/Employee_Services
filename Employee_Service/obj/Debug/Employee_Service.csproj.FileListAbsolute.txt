@@ -90,6 +90,9 @@ E:\PRACTISE\Employee_Service\Employee_Service\bin\Microsoft.Owin.Security.Google
 E:\PRACTISE\Employee_Service\Employee_Service\bin\Microsoft.Owin.Security.Twitter.xml
 E:\PRACTISE\Employee_Service\Employee_Service\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 E:\PRACTISE\Employee_Service\Employee_Service\bin\System.Web.Http.Owin.xml
-E:\PRACTISE\Employee_Service\Employee_Service\obj\Debug\Employee_Service.csprojResolveAssemblyReference.cache
 E:\PRACTISE\Employee_Service\Employee_Service\obj\Debug\Employee_Service.dll
 E:\PRACTISE\Employee_Service\Employee_Service\obj\Debug\Employee_Service.pdb
+E:\PRACTISE\Employee_Service\Employee_Service\bin\EmployeeDataAccess.dll.config
+E:\PRACTISE\Employee_Service\Employee_Service\obj\Debug\Employee_Service.csprojAssemblyReference.cache
+E:\PRACTISE\Employee_Service\Employee_Service\obj\Debug\Employee_Service.csproj.CoreCompileInputs.cache
+E:\PRACTISE\Employee_Service\Employee_Service\obj\Debug\Employee_Service.csproj.CopyComplete
